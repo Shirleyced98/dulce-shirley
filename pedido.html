@@ -43,108 +43,108 @@
 
         <div class="pedido-diseno">
             <form id="formulario-pedido" class="formulario" action="#" method="post">
-            <div class="campo">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" autocomplete="name" required
-                       aria-describedby="error-nombre">
-                <p class="error" id="error-nombre"></p>
-            </div>
-
-            <div class="campo">
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo" autocomplete="email" required
-                       placeholder="nombre@correo.com" aria-describedby="error-correo">
-                <p class="error" id="error-correo"></p>
-            </div>
-
-            <div class="campo">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" autocomplete="tel" required
-                       inputmode="tel" placeholder="0960606529"
-                       aria-describedby="ayuda-telefono error-telefono">
-                <p class="ayuda" id="ayuda-telefono">Diez números, empieza con 0. Ejemplo: 0960606529.</p>
-                <p class="error" id="error-telefono"></p>
-            </div>
-
-            <div class="campo">
-                <label for="pastel">Pastel</label>
-                <select id="pastel" name="pastel" required aria-describedby="error-pastel">
-                    <option value="">Seleccione un pastel</option>
-                    <option value="torta-chocolate" data-precio="28">Torta de chocolate y fresas ($28,00)</option>
-                    <option value="cheesecake-maracuya" data-precio="22">Cheesecake de maracuyá ($22,00)</option>
-                    <option value="torta-vainilla" data-precio="30">Torta de vainilla con flores ($30,00)</option>
-                    <option value="torta-zanahoria" data-precio="24">Torta de zanahoria ($24,00)</option>
-                    <option value="tres-leches" data-precio="26">Torta de tres leches ($26,00)</option>
-                    <option value="pie-limon" data-precio="18">Pie de limón ($18,00)</option>
-                    <option value="torta-avena" data-precio="20">Torta de avena y banano ($20,00)</option>
-                    <option value="red-velvet" data-precio="32">Red velvet ($32,00)</option>
-                </select>
-                <p class="error" id="error-pastel"></p>
-            </div>
-
-            <div class="campo">
-                <label for="cantidad">Cantidad de pasteles</label>
-                <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" value="1" required
-                       aria-describedby="ayuda-cantidad error-cantidad">
-                <p class="ayuda" id="ayuda-cantidad">Para más de 10 pasteles, escríbenos por correo.</p>
-                <p class="error" id="error-cantidad"></p>
-            </div>
-
-            <div class="campo">
-                <label for="fecha">Fecha de entrega o retiro</label>
-                <input type="date" id="fecha" name="fecha" required aria-describedby="error-fecha">
-                <p class="error" id="error-fecha"></p>
-            </div>
-
-            <fieldset aria-describedby="error-entrega">
-                <legend>Forma de entrega</legend>
-                <div class="opcion">
-                    <input type="radio" id="retiro" name="entrega" value="retiro" checked>
-                    <label for="retiro">Retiro en el local (sin costo)</label>
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" required
+                           aria-describedby="error-nombre">
+                    <p class="error" id="error-nombre"></p>
                 </div>
-                <div class="opcion">
-                    <input type="radio" id="domicilio" name="entrega" value="domicilio">
-                    <label for="domicilio">Entrega a domicilio en Portoviejo (+ $3,00)</label>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" required
+                           placeholder="nombre@correo.com" aria-describedby="error-correo">
+                    <p class="error" id="error-correo"></p>
                 </div>
-                <p class="error" id="error-entrega"></p>
-            </fieldset>
 
-            <div class="campo">
-                <label for="direccion">Dirección de entrega</label>
-                <input type="text" id="direccion" name="direccion" autocomplete="address-line1"
-                       aria-describedby="ayuda-direccion error-direccion">
-                <p class="ayuda" id="ayuda-direccion">Solo si eligió entrega a domicilio. Incluye calles de referencia.</p>
-                <p class="error" id="error-direccion"></p>
-            </div>
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" autocomplete="tel" required
+                           inputmode="tel" placeholder="0960606529"
+                           aria-describedby="ayuda-telefono error-telefono">
+                    <p class="ayuda" id="ayuda-telefono">Diez números, empieza con 0. Ejemplo: 0960606529.</p>
+                    <p class="error" id="error-telefono"></p>
+                </div>
 
-            <div class="campo">
-                <label for="mensaje">Mensaje en el pastel</label>
-                <input type="text" id="mensaje" name="mensaje" maxlength="40"
-                       aria-describedby="ayuda-mensaje error-mensaje">
-                <p class="ayuda" id="ayuda-mensaje">Máximo 40 caracteres. Ejemplo: «Feliz cumple, Ana».</p>
-                <p class="error" id="error-mensaje"></p>
-            </div>
+                <div class="campo">
+                    <label for="pastel">Pastel</label>
+                    <select id="pastel" name="pastel" required aria-describedby="error-pastel">
+                        <option value="">Seleccione un pastel</option>
+                        <option value="torta-chocolate" data-precio="28">Torta de chocolate y fresas ($28,00)</option>
+                        <option value="cheesecake-maracuya" data-precio="22">Cheesecake de maracuyá ($22,00)</option>
+                        <option value="torta-vainilla" data-precio="30">Torta de vainilla con flores ($30,00)</option>
+                        <option value="torta-zanahoria" data-precio="24">Torta de zanahoria ($24,00)</option>
+                        <option value="tres-leches" data-precio="26">Torta de tres leches ($26,00)</option>
+                        <option value="pie-limon" data-precio="18">Pie de limón ($18,00)</option>
+                        <option value="torta-avena" data-precio="20">Torta de avena y banano ($20,00)</option>
+                        <option value="red-velvet" data-precio="32">Red velvet ($32,00)</option>
+                    </select>
+                    <p class="error" id="error-pastel"></p>
+                </div>
 
-            <div class="opcion">
-                <input type="checkbox" id="acepto" name="acepto" required aria-describedby="error-acepto">
-                <label for="acepto">Acepto que me contacten por teléfono para confirmar el pedido.</label>
-            </div>
-            <p class="error" id="error-acepto"></p>
+                <div class="campo">
+                    <label for="cantidad">Cantidad de pasteles</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" value="1" required
+                           aria-describedby="ayuda-cantidad error-cantidad">
+                    <p class="ayuda" id="ayuda-cantidad">Para más de 10 pasteles, escríbenos por correo.</p>
+                    <p class="error" id="error-cantidad"></p>
+                </div>
 
-            <div class="resumen-pedido">
-                <p>Total estimado: <span class="total" id="total" aria-live="polite">$0,00</span></p>
-                <p class="ayuda">El total incluye el envío de $3,00 cuando se elige entrega a domicilio.</p>
-            </div>
+                <div class="campo">
+                    <label for="fecha">Fecha de entrega o retiro</label>
+                    <input type="date" id="fecha" name="fecha" required aria-describedby="error-fecha">
+                    <p class="error" id="error-fecha"></p>
+                </div>
 
-            <div class="acciones">
-                <button type="submit" class="boton">Enviar pedido</button>
-                <button type="reset" class="boton boton--secundario">Limpiar formulario</button>
-            </div>
+                <fieldset aria-describedby="error-entrega">
+                    <legend>Forma de entrega</legend>
+                    <div class="opcion">
+                        <input type="radio" id="retiro" name="entrega" value="retiro" checked>
+                        <label for="retiro">Retiro en el local (sin costo)</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="domicilio" name="entrega" value="domicilio">
+                        <label for="domicilio">Entrega a domicilio en Portoviejo (+ $3,00)</label>
+                    </div>
+                    <p class="error" id="error-entrega"></p>
+                </fieldset>
 
-            <p class="ayuda">
-                Este sitio es un proyecto académico: el formulario valida los datos en el navegador
-                y no los envía a ningún servidor.
-            </p>
+                <div class="campo">
+                    <label for="direccion">Dirección de entrega</label>
+                    <input type="text" id="direccion" name="direccion" autocomplete="address-line1"
+                           aria-describedby="ayuda-direccion error-direccion">
+                    <p class="ayuda" id="ayuda-direccion">Solo si eligió entrega a domicilio. Incluye calles de referencia.</p>
+                    <p class="error" id="error-direccion"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje en el pastel</label>
+                    <input type="text" id="mensaje" name="mensaje" maxlength="40"
+                           aria-describedby="ayuda-mensaje error-mensaje">
+                    <p class="ayuda" id="ayuda-mensaje">Máximo 40 caracteres. Ejemplo: «Feliz cumple, Ana».</p>
+                    <p class="error" id="error-mensaje"></p>
+                </div>
+
+                <div class="opcion">
+                    <input type="checkbox" id="acepto" name="acepto" required aria-describedby="error-acepto">
+                    <label for="acepto">Acepto que me contacten por teléfono para confirmar el pedido.</label>
+                </div>
+                <p class="error" id="error-acepto"></p>
+
+                <div class="resumen-pedido">
+                    <p>Total estimado: <span class="total" id="total" aria-live="polite">$0,00</span></p>
+                    <p class="ayuda">El total incluye el envío de $3,00 cuando se elige entrega a domicilio.</p>
+                </div>
+
+                <div class="acciones">
+                    <button type="submit" class="boton">Enviar pedido</button>
+                    <button type="reset" class="boton boton--secundario">Limpiar formulario</button>
+                </div>
+
+                <p class="ayuda">
+                    Este sitio es un proyecto académico: el formulario valida los datos en el navegador
+                    y no los envía a ningún servidor.
+                </p>
             </form>
 
             <aside class="ayuda-pedido" aria-labelledby="titulo-ayuda">
