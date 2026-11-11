@@ -1,11 +1,3 @@
-/*
- * Validación y resumen del pedido.
- * - Cada error se explica con texto junto al campo (WCAG 1.4.1 y 3.3.1), no solo con color.
- * - El campo con error recibe aria-invalid y el mensaje se enlaza con aria-describedby.
- * - Arriba aparece un resumen con enlaces a los campos con error y recibe el foco.
- * - El total se calcula al elegir el pastel, la cantidad y la forma de entrega.
- * - Sin JavaScript, el navegador sigue validando con required, type y min.
- */
 (function () {
     'use strict';
 
@@ -32,14 +24,12 @@
 
         formulario.setAttribute('novalidate', '');
 
-        // La fecha mínima es hoy (se calcula en la zona horaria del navegador).
         var hoy = new Date();
         var iso = hoy.getFullYear() + '-' +
             ('0' + (hoy.getMonth() + 1)).slice(-2) + '-' +
             ('0' + hoy.getDate()).slice(-2);
         fecha.setAttribute('min', iso);
 
-        // Si se llega desde el catálogo, se preselecciona el pastel del enlace.
         var parametros = new URLSearchParams(window.location.search);
         var pedido = parametros.get('pastel');
         if (pedido) {
@@ -205,7 +195,6 @@
             return null;
         }
 
-        // Al salir de un campo que ya tenía error, se revisa otra vez para quitar el aviso.
         reglas.forEach(function (regla) {
             var campo = document.getElementById(regla.id);
             campo.addEventListener('blur', function () {
@@ -317,8 +306,6 @@
                 total: totalTexto.textContent
             };
 
-            // Se limpia primero y después se muestra la confirmación, porque el evento
-            // reset vacía el recuadro de confirmación.
             formulario.reset();
             actualizarTotal();
             mostrarConfirmacion(datos);

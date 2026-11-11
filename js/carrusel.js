@@ -1,23 +1,7 @@
-/*
- * Carrusel de imágenes de la portada.
- * - Las diapositivas pasan solas cada 5 segundos.
- * - El botón Pausar / Reproducir detiene o reanuda el avance automático
- *   (WCAG 2.2.2: el contenido que se mueve solo se puede pausar).
- * - Los botones Anterior, Siguiente y los puntos cambian de diapositiva y
- *   reinician el conteo de los 5 segundos.
- * - La diapositiva activa se marca con aria-hidden="false"; las demás, con "true".
- * - El punto activo usa aria-current="true".
- * - El contador es una región viva (aria-live) que anuncia "2 de 5".
- * - Las flechas del teclado (← y →) también cambian de diapositiva.
- * - Si el sistema pide menos movimiento, no arranca solo: se queda en la primera
- *   imagen hasta que la persona presione Reproducir.
- * - Si este archivo no carga, se ve la primera imagen y los controles no aparecen:
- *   el contenido sigue siendo legible (mejora progresiva).
- */
 (function () {
     'use strict';
 
-    var ESPERA = 5000; // milisegundos entre diapositiva y diapositiva
+    var ESPERA = 5000;
 
     function iniciar(carrusel) {
         var pista = carrusel.querySelector('.carrusel__pista');
@@ -124,7 +108,6 @@
             });
         }
 
-        // Si la pestaña queda en segundo plano, se detiene; al volver, sigue.
         document.addEventListener('visibilitychange', function () {
             if (document.hidden) {
                 detener();

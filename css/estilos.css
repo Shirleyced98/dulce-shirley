@@ -1,27 +1,18 @@
-/* =========================================================
-   Dulce Shirley – Hoja de estilos única
-   - Unidades relativas (rem, em, %) y diseño adaptable.
-   - Colores con contraste verificado (WCAG 2.2, nivel AA).
-   - Foco visible en todos los elementos interactivos.
-   - Objetivos táctiles de 44 px como mínimo.
-   - Sin frameworks ni librerías externas.
-   ========================================================= */
-
 :root {
-    --tinta: #2a1a14;            /* texto principal sobre crema: 16,0:1 */
-    --tinta-suave: #5c453a;      /* texto secundario: 8,5:1 */
-    --crema: #fff9f4;            /* fondo general */
-    --crema-2: #f7e8da;          /* fondo de tarjetas y secciones */
+    --tinta: #2a1a14;
+    --tinta-suave: #5c453a;
+    --crema: #fff9f4;
+    --crema-2: #f7e8da;
     --crema-3: #efd9c6;
-    --frambuesa: #7a1f3d;        /* color principal: 10,0:1 sobre blanco */
+    --frambuesa: #7a1f3d;
     --frambuesa-osc: #5c142c;
     --frambuesa-claro: #f6dfe7;
-    --dorado: #8a5a1e;           /* texto de apoyo: 5,7:1 sobre crema */
+    --dorado: #8a5a1e;
     --dorado-claro: #f3e2c7;
-    --error: #a4161a;            /* 7,8:1 sobre blanco */
-    --exito: #1b5e20;            /* 7,9:1 sobre blanco */
-    --foco: #0b4f8a;             /* anillo de foco: 8,0:1 sobre crema */
-    --borde: #7a5c4b;            /* bordes de campos: 5,8:1 sobre crema */
+    --error: #a4161a;
+    --exito: #1b5e20;
+    --foco: #0b4f8a;
+    --borde: #7a5c4b;
     --blanco: #ffffff;
     --sombra: 0 0.4rem 1.2rem rgba(74, 44, 26, 0.12);
     --radio: 0.75rem;
@@ -102,7 +93,6 @@ ol {
     padding-left: 1.25rem;
 }
 
-/* ---------- Enlace para saltar al contenido ---------- */
 .saltar {
     position: absolute;
     left: 0.5rem;
@@ -119,7 +109,6 @@ ol {
     top: 0;
 }
 
-/* ---------- Encabezado y menú ---------- */
 .encabezado {
     background-color: var(--frambuesa);
     color: var(--blanco);
@@ -206,7 +195,6 @@ ol {
     font-weight: bold;
 }
 
-/* ---------- Contenido principal ---------- */
 main {
     display: block;
     max-width: 72rem;
@@ -224,7 +212,6 @@ section {
     color: var(--tinta-suave);
 }
 
-/* ---------- Portada ---------- */
 .heroe {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -271,7 +258,6 @@ section {
     border-radius: 2rem;
 }
 
-/* ---------- Botones ---------- */
 .boton {
     display: inline-block;
     min-height: 2.75rem;
@@ -314,7 +300,6 @@ section {
     background-color: var(--frambuesa);
 }
 
-/* ---------- Rejilla de productos ---------- */
 .rejilla {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -377,7 +362,6 @@ section {
     color: var(--tinta-suave);
 }
 
-/* ---------- Filtros del catálogo ---------- */
 .filtros {
     display: flex;
     flex-wrap: wrap;
@@ -451,7 +435,6 @@ section {
     border-radius: 0.4rem;
 }
 
-/* ---------- Equipo ---------- */
 .equipo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -494,7 +477,6 @@ section {
     color: var(--tinta-suave);
 }
 
-/* ---------- Nosotros ---------- */
 .bloque-doble {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -571,7 +553,6 @@ tbody th {
     background-color: var(--crema-2);
 }
 
-/* ---------- Formulario ---------- */
 .formulario {
     max-width: 44rem;
 }
@@ -748,7 +729,6 @@ fieldset {
     color: var(--frambuesa);
 }
 
-/* ---------- Carrusel de la portada ---------- */
 .carrusel {
     max-width: 46rem;
     margin: 1.5rem auto 0;
@@ -850,7 +830,6 @@ fieldset {
     color: var(--tinta-suave);
 }
 
-/* ---------- Pie de página ---------- */
 .pie {
     padding: 2rem 1rem;
     color: var(--crema);
@@ -896,7 +875,6 @@ fieldset {
     border-top: 1px solid #6b4453;
 }
 
-/* ---------- Foco visible ---------- */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -913,7 +891,6 @@ textarea:focus-visible {
     box-shadow: 0 0 0 6px var(--foco);
 }
 
-/* ---------- Diseño adaptable ---------- */
 @media (max-width: 52em) {
     .heroe,
     .bloque-doble,
@@ -965,7 +942,6 @@ textarea:focus-visible {
         width: 100%;
     }
 
-    /* En el celular los puntos van arriba y los botones comparten una fila */
     .carrusel__puntos {
         order: -1;
         width: 100%;
@@ -976,7 +952,6 @@ textarea:focus-visible {
     }
 }
 
-/* Respeta a quien pidió menos movimiento en su sistema */
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;

@@ -1,10 +1,3 @@
-/*
- * Buscador y filtros del catálogo.
- * - Los botones de categoría usan aria-pressed para avisar cuál está activo.
- * - Cada tarjeta se muestra u oculta cambiando el atributo hidden (modificación del DOM).
- * - El contador es una región viva (aria-live) para que el lector de pantalla anuncie el cambio.
- * - Se quitan las tildes al comparar, así "maracuya" encuentra "maracuyá".
- */
 (function () {
     'use strict';
 

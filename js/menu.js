@@ -1,10 +1,3 @@
-/*
- * Menú adaptable de Dulce Shirley.
- * - Los eventos se registran con addEventListener (sin onclick en el HTML).
- * - El botón actualiza aria-expanded al abrir y cerrar (WAI-ARIA 1.2).
- * - La tecla Esc cierra el menú y devuelve el foco al botón (WCAG 2.1.1).
- * - Si este archivo no carga, el menú se ve completo: mejora progresiva.
- */
 (function () {
     'use strict';
 
