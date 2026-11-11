@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Catálogo completo de Dulce Shirley: tortas, cheesecakes, pies y opciones sin azúcar añadida, con precios y número de porciones.">
+    <title>Productos | Dulce Shirley – Pastelería artesanal</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/productos.js" defer></script>
+</head>
+
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <div class="encabezado__contenido">
+            <p class="marca"><a href="index.html">Dulce Shirley<span>Pastelería artesanal</span></a></p>
+            <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal" hidden>Menú</button>
+            <nav aria-label="Menú principal">
+                <ul class="menu" id="menu-principal">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" aria-current="page">Productos</a></li>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <h1>Todos nuestros productos</h1>
+        <p class="entrada">
+            Ocho pasteles disponibles todo el año. Los precios son por pastel completo y el número de
+            porciones es aproximado, según el tamaño del corte.
+        </p>
+
+        <section aria-labelledby="titulo-catalogo">
+            <h2 id="titulo-catalogo">Buscar y filtrar</h2>
+
+            <div class="filtros">
+                <div class="filtros__campo">
+                    <label for="buscador">Buscar un pastel</label>
+                    <input type="search" id="buscador" name="buscador" placeholder="Ejemplo: chocolate"
+                           autocomplete="off">
+                </div>
+                <div class="grupo-botones">
+                    <button type="button" class="filtro" data-filtro="todas" aria-pressed="true">Todas</button>
+                    <button type="button" class="filtro" data-filtro="tortas" aria-pressed="false">Tortas</button>
+                    <button type="button" class="filtro" data-filtro="postres-frios" aria-pressed="false">Postres fríos</button>
+                    <button type="button" class="filtro" data-filtro="saludable" aria-pressed="false">Saludable</button>
+                </div>
+            </div>
+
+            <p class="contador" id="contador" aria-live="polite">8 productos disponibles</p>
+
+            <ul class="rejilla" id="lista-productos">
+                <li data-categoria="tortas" data-nombre="torta de chocolate y fresas">
+                    <article class="tarjeta">
+                        <img src="img/pastel1.jpg" width="800" height="600"
+                             alt="Torta de chocolate cubierta con ganache brillante y fresas frescas encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Torta de chocolate y fresas</h2>
+                            <p>Bizcocho de cacao con ganache semiamargo y fresas frescas.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$28,00 <span class="porcion">12 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=torta-chocolate">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li data-categoria="postres-frios" data-nombre="cheesecake de maracuya">
+                    <article class="tarjeta">
+                        <img src="img/pastel2.jpg" width="800" height="600"
+                             alt="Cheesecake de maracuyá con coulis de maracuyá y una rodaja de la fruta encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Cheesecake de maracuyá</h2>
+                            <p>Base de galleta, queso crema y coulis de maracuyá. Se sirve frío.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$22,00 <span class="porcion">10 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=cheesecake-maracuya">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li data-categoria="tortas" data-nombre="torta de vainilla con flores">
+                    <article class="tarjeta">
+                        <img src="img/pastel3.jpg" width="800" height="600"
+                             alt="Torta de vainilla con buttercream rosa pálido y flores comestibles.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Torta de vainilla con flores</h2>
+                            <p>Bizcocho de vainilla, buttercream y flores comestibles. Ideal para matrimonios.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$30,00 <span class="porcion">12 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=torta-vainilla">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li data-categoria="tortas" data-nombre="torta de zanahoria">
+                    <article class="tarjeta">
+                        <img src="img/pastel4.jpg" width="800" height="600"
+                             alt="Torta de zanahoria con frosting de queso crema y nueces picadas encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Torta de zanahoria</h2>
+                            <p>Con zanahoria rallada, canela y frosting de queso crema. Lleva nueces.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$24,00 <span class="porcion">10 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=torta-zanahoria">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li data-categoria="tortas" data-nombre="torta de tres leches">
+                    <article class="tarjeta">
+                        <img src="img/pastel5.jpg" width="800" height="600"
+                             alt="Torta de tres leches con crema batida y canela espolvoreada.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Torta de tres leches</h2>
+                            <p>Bizcocho bien humedecido con tres leches y un toque de canela.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$26,00 <span class="porcion">12 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=tres-leches">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li data-categoria="postres-frios" data-nombre="pie de limon">
+                    <article class="tarjeta">
+                        <img src="img/pastel6.jpg" width="800" height="600"
+                             alt="Pie de limón con merengue dorado en un molde de vidrio.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Pie de limón</h2>
+                            <p>Masa quebrada, crema de limón y merengue quemado con soplete.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$18,00 <span class="porcion">8 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=pie-limon">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li data-categoria="saludable" data-nombre="torta de avena y banano">
+                    <article class="tarjeta">
+                        <img src="img/pastel7.jpg" width="800" height="600"
+                             alt="Torta de avena y banano sin azúcar añadida, con rodajas de banano encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Torta de avena y banano</h2>
+                            <p>Sin azúcar añadida: endulza el banano maduro. Con avena y canela.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$20,00 <span class="porcion">8 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=torta-avena">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li data-categoria="tortas" data-nombre="red velvet">
+                    <article class="tarjeta">
+                        <img src="img/pastel8.jpg" width="800" height="600"
+                             alt="Torta red velvet de color rojo oscuro con frosting de queso crema y migas rojas encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h2>Red velvet</h2>
+                            <p>Bizcocho rojo con cacao y frosting de queso crema. Muy pedida para aniversarios.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$32,00 <span class="porcion">12 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=red-velvet">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+
+            <p class="aviso-vacio" id="sin-resultados" hidden>
+                No encontramos pasteles con ese nombre. Prueba con otra palabra o cambia el filtro.
+            </p>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="pie__contenido">
+            <section aria-labelledby="pie-marca">
+                <h2 id="pie-marca">Dulce Shirley</h2>
+                <p>Pastelería artesanal en Portoviejo. Recetas de familia desde 2012.</p>
+            </section>
+            <section aria-labelledby="pie-visita">
+                <h2 id="pie-visita">Visítanos</h2>
+                <p>Calle Bolívar 123 y Sucre<br>Portoviejo, Manabí</p>
+                <p>Teléfono: <a href="tel:+593960606529">096 060 6529</a></p>
+            </section>
+            <section aria-labelledby="pie-horario">
+                <h2 id="pie-horario">Horario</h2>
+                <p>Lunes a viernes: 8h00 a 19h00<br>Sábado: 9h00 a 16h00</p>
+            </section>
+            <nav aria-labelledby="pie-enlaces">
+                <h2 id="pie-enlaces">Enlaces</h2>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="pie__legal">
+            © 2026 Dulce Shirley · Proyecto académico de Desarrollo Basado en Plataformas (UTM).
+            Los pedidos de este sitio son de práctica y no se envían a ningún servidor.
+        </p>
+    </footer>
+</body>
+
+</html>

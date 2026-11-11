@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dulce Shirley: pastelería artesanal en Portoviejo. Conoce los pasteles más recomendados, nuestro equipo y haz tu pedido en línea.">
+    <title>Inicio | Dulce Shirley – Pastelería artesanal</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/carrusel.js" defer></script>
+</head>
+
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <div class="encabezado__contenido">
+            <p class="marca"><a href="index.html">Dulce Shirley<span>Pastelería artesanal</span></a></p>
+            <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal" hidden>Menú</button>
+            <nav aria-label="Menú principal">
+                <ul class="menu" id="menu-principal">
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <div class="heroe">
+            <div class="heroe__texto">
+                <p class="etiqueta">Hecho en casa, todos los días</p>
+                <h1>Los pasteles más recomendados de Dulce Shirley</h1>
+                <p>
+                    Somos una pastelería pequeña de Portoviejo. Horneamos por pedido, con mantequilla,
+                    huevos de campo y recetas que pasan de una generación a otra. Aquí están los tres
+                    pasteles que más nos piden los clientes.
+                </p>
+                <p>
+                    <a class="boton" href="productos.html">Ver todos los productos</a>
+                    <a class="boton boton--secundario" href="pedido.html">Hacer un pedido</a>
+                </p>
+            </div>
+            <figure class="heroe__figura">
+                <img src="img/portada.jpg" width="1600" height="900"
+                     alt="Mostrador de la pastelería con tres pasteles sobre platos blancos, estantes de madera y una ventana con luz de mañana.">
+                <figcaption>Nuestro local en Portoviejo: todo se hornea el mismo día.</figcaption>
+            </figure>
+        </div>
+
+        <section aria-labelledby="titulo-favoritos">
+            <h2 id="titulo-favoritos">Los favoritos de la casa</h2>
+            <p class="entrada">Estos son los pasteles que más se repiten en los pedidos de cumpleaños y reuniones familiares.</p>
+
+            <div class="carrusel" data-carrusel role="region" aria-roledescription="carrusel"
+                 aria-label="Pasteles recomendados">
+                <div class="carrusel__ventana">
+                    <div class="carrusel__pista">
+                        <figure class="carrusel__diapositiva" aria-label="Diapositiva 1 de 5">
+                            <img src="img/pastel1.jpg" width="800" height="600"
+                                 alt="Torta de chocolate cubierta con ganache brillante y fresas frescas encima.">
+                            <figcaption>Torta de chocolate y fresas: la más pedida para cumpleaños.</figcaption>
+                        </figure>
+                        <figure class="carrusel__diapositiva" aria-label="Diapositiva 2 de 5">
+                            <img src="img/pastel3.jpg" width="800" height="600"
+                                 alt="Torta de vainilla con buttercream rosa pálido y flores comestibles.">
+                            <figcaption>Torta de vainilla con flores: la elegida para matrimonios y bautizos.</figcaption>
+                        </figure>
+                        <figure class="carrusel__diapositiva" aria-label="Diapositiva 3 de 5">
+                            <img src="img/pastel4.jpg" width="800" height="600"
+                                 alt="Torta de zanahoria con frosting de queso crema y nueces picadas encima.">
+                            <figcaption>Torta de zanahoria: con nueces y frosting de queso crema.</figcaption>
+                        </figure>
+                        <figure class="carrusel__diapositiva" aria-label="Diapositiva 4 de 5">
+                            <img src="img/pastel6.jpg" width="800" height="600"
+                                 alt="Pie de limón con merengue dorado en un molde de vidrio.">
+                            <figcaption>Pie de limón: el postre frío que más se lleva los fines de semana.</figcaption>
+                        </figure>
+                        <figure class="carrusel__diapositiva" aria-label="Diapositiva 5 de 5">
+                            <img src="img/pastel8.jpg" width="800" height="600"
+                                 alt="Torta red velvet de color rojo oscuro con frosting de queso crema y migas rojas encima.">
+                            <figcaption>Red velvet: la preferida para aniversarios.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="carrusel__controles">
+                    <button type="button" class="boton boton--secundario" data-carrusel="anterior"
+                            aria-label="Diapositiva anterior">Anterior</button>
+                    <div class="carrusel__puntos" role="group" aria-label="Elegir diapositiva">
+                        <button type="button" class="carrusel__punto" data-ir="0" aria-label="Ir a la diapositiva 1"
+                                aria-current="true">1</button>
+                        <button type="button" class="carrusel__punto" data-ir="1" aria-label="Ir a la diapositiva 2">2</button>
+                        <button type="button" class="carrusel__punto" data-ir="2" aria-label="Ir a la diapositiva 3">3</button>
+                        <button type="button" class="carrusel__punto" data-ir="3" aria-label="Ir a la diapositiva 4">4</button>
+                        <button type="button" class="carrusel__punto" data-ir="4" aria-label="Ir a la diapositiva 5">5</button>
+                    </div>
+                    <button type="button" class="boton boton--secundario" data-carrusel="siguiente"
+                            aria-label="Diapositiva siguiente">Siguiente</button>
+                </div>
+                <div class="carrusel__pie">
+                    <p class="carrusel__contador" aria-live="polite">1 de 5</p>
+                    <button type="button" class="boton boton--secundario carrusel__pausa"
+                            data-carrusel="pausa">Pausar</button>
+                </div>
+            </div>
+
+            <ul class="rejilla">
+                <li>
+                    <article class="tarjeta">
+                        <img src="img/pastel1.jpg" width="800" height="600"
+                             alt="Torta de chocolate cubierta con ganache brillante y fresas frescas encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h3>Torta de chocolate y fresas</h3>
+                            <p>Bizcocho de cacao con ganache semiamargo y fresas frescas. Es la más pedida para cumpleaños.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$28,00 <span class="porcion">12 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=torta-chocolate">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <img src="img/pastel2.jpg" width="800" height="600"
+                             alt="Cheesecake de maracuyá con coulis de maracuyá y una rodaja de la fruta encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h3>Cheesecake de maracuyá</h3>
+                            <p>Base de galleta, queso crema y coulis de maracuyá. Se sirve frío y aguanta bien el transporte.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$22,00 <span class="porcion">10 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=cheesecake-maracuya">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <img src="img/pastel8.jpg" width="800" height="600"
+                             alt="Torta red velvet de color rojo oscuro con frosting de queso crema y migas rojas encima.">
+                        <div class="tarjeta__cuerpo">
+                            <h3>Red velvet</h3>
+                            <p>Bizcocho rojo con un toque de cacao y frosting de queso crema. La preferida para aniversarios.</p>
+                            <div class="tarjeta__pie">
+                                <p class="precio">$32,00 <span class="porcion">12 porciones</span></p>
+                                <a class="boton boton--secundario" href="pedido.html?pastel=red-velvet">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="titulo-elegirnos">
+            <h2 id="titulo-elegirnos">¿Por qué nos eligen?</h2>
+            <ul class="valores">
+                <li>
+                    <strong>Recetas de familia</strong>
+                    <p>Usamos las recetas de la familia Cedeño, sin mezclas preparadas ni conservantes.</p>
+                </li>
+                <li>
+                    <strong>Entrega el mismo día</strong>
+                    <p>Los pedidos de Portoviejo se entregan en la mañana o se retiran en el local.</p>
+                </li>
+                <li>
+                    <strong>Opciones para todos</strong>
+                    <p>Tenemos pasteles sin azúcar añadida y opciones sin frutos secos.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="titulo-pedido">
+            <div class="resumen-pedido">
+                <h2 id="titulo-pedido">¿Listo para tu pedido?</h2>
+                <p>
+                    Elige el pastel, la cantidad y la fecha de entrega en el formulario.
+                    Te confirmamos por teléfono antes de hornear.
+                </p>
+                <p><a class="boton" href="pedido.html">Ir al formulario de pedido</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="pie__contenido">
+            <section aria-labelledby="pie-marca">
+                <h2 id="pie-marca">Dulce Shirley</h2>
+                <p>Pastelería artesanal en Portoviejo. Recetas de familia desde 2012.</p>
+            </section>
+            <section aria-labelledby="pie-visita">
+                <h2 id="pie-visita">Visítanos</h2>
+                <p>Calle Bolívar 123 y Sucre<br>Portoviejo, Manabí</p>
+                <p>Teléfono: <a href="tel:+593960606529">096 060 6529</a></p>
+            </section>
+            <section aria-labelledby="pie-horario">
+                <h2 id="pie-horario">Horario</h2>
+                <p>Lunes a viernes: 8h00 a 19h00<br>Sábado: 9h00 a 16h00</p>
+            </section>
+            <nav aria-labelledby="pie-enlaces">
+                <h2 id="pie-enlaces">Enlaces</h2>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="pie__legal">
+            © 2026 Dulce Shirley · Proyecto académico de Desarrollo Basado en Plataformas (UTM).
+            Los pedidos de este sitio son de práctica y no se envían a ningún servidor.
+        </p>
+    </footer>
+</body>
+
+</html>

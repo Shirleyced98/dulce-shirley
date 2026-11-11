@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Formulario de pedido de Dulce Shirley: elige el pastel, la cantidad, la fecha y la forma de entrega. Validación con JavaScript.">
+    <title>Haz tu pedido | Dulce Shirley – Pastelería artesanal</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/pedido.js" defer></script>
+</head>
+
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <div class="encabezado__contenido">
+            <p class="marca"><a href="index.html">Dulce Shirley<span>Pastelería artesanal</span></a></p>
+            <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal" hidden>Menú</button>
+            <nav aria-label="Menú principal">
+                <ul class="menu" id="menu-principal">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="pedido.html" aria-current="page">Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <h1>Haz tu pedido</h1>
+        <p class="entrada">
+            Completa los datos y te confirmamos por teléfono. Los pedidos se reciben con al menos
+            48 horas de anticipación; si necesitas algo para mañana, llámanos directamente.
+        </p>
+
+        <div id="confirmacion" class="confirmacion" tabindex="-1"></div>
+        <div id="resumen-errores" class="resumen-errores" tabindex="-1"></div>
+
+        <div class="pedido-diseno">
+            <form id="formulario-pedido" class="formulario" action="#" method="post">
+            <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required
+                       aria-describedby="error-nombre">
+                <p class="error" id="error-nombre"></p>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required
+                       placeholder="nombre@correo.com" aria-describedby="error-correo">
+                <p class="error" id="error-correo"></p>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" required
+                       inputmode="tel" placeholder="0960606529"
+                       aria-describedby="ayuda-telefono error-telefono">
+                <p class="ayuda" id="ayuda-telefono">Diez números, empieza con 0. Ejemplo: 0960606529.</p>
+                <p class="error" id="error-telefono"></p>
+            </div>
+
+            <div class="campo">
+                <label for="pastel">Pastel</label>
+                <select id="pastel" name="pastel" required aria-describedby="error-pastel">
+                    <option value="">Seleccione un pastel</option>
+                    <option value="torta-chocolate" data-precio="28">Torta de chocolate y fresas ($28,00)</option>
+                    <option value="cheesecake-maracuya" data-precio="22">Cheesecake de maracuyá ($22,00)</option>
+                    <option value="torta-vainilla" data-precio="30">Torta de vainilla con flores ($30,00)</option>
+                    <option value="torta-zanahoria" data-precio="24">Torta de zanahoria ($24,00)</option>
+                    <option value="tres-leches" data-precio="26">Torta de tres leches ($26,00)</option>
+                    <option value="pie-limon" data-precio="18">Pie de limón ($18,00)</option>
+                    <option value="torta-avena" data-precio="20">Torta de avena y banano ($20,00)</option>
+                    <option value="red-velvet" data-precio="32">Red velvet ($32,00)</option>
+                </select>
+                <p class="error" id="error-pastel"></p>
+            </div>
+
+            <div class="campo">
+                <label for="cantidad">Cantidad de pasteles</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" value="1" required
+                       aria-describedby="ayuda-cantidad error-cantidad">
+                <p class="ayuda" id="ayuda-cantidad">Para más de 10 pasteles, escríbenos por correo.</p>
+                <p class="error" id="error-cantidad"></p>
+            </div>
+
+            <div class="campo">
+                <label for="fecha">Fecha de entrega o retiro</label>
+                <input type="date" id="fecha" name="fecha" required aria-describedby="error-fecha">
+                <p class="error" id="error-fecha"></p>
+            </div>
+
+            <fieldset aria-describedby="error-entrega">
+                <legend>Forma de entrega</legend>
+                <div class="opcion">
+                    <input type="radio" id="retiro" name="entrega" value="retiro" checked>
+                    <label for="retiro">Retiro en el local (sin costo)</label>
+                </div>
+                <div class="opcion">
+                    <input type="radio" id="domicilio" name="entrega" value="domicilio">
+                    <label for="domicilio">Entrega a domicilio en Portoviejo (+ $3,00)</label>
+                </div>
+                <p class="error" id="error-entrega"></p>
+            </fieldset>
+
+            <div class="campo">
+                <label for="direccion">Dirección de entrega</label>
+                <input type="text" id="direccion" name="direccion" autocomplete="address-line1"
+                       aria-describedby="ayuda-direccion error-direccion">
+                <p class="ayuda" id="ayuda-direccion">Solo si eligió entrega a domicilio. Incluye calles de referencia.</p>
+                <p class="error" id="error-direccion"></p>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje en el pastel</label>
+                <input type="text" id="mensaje" name="mensaje" maxlength="40"
+                       aria-describedby="ayuda-mensaje error-mensaje">
+                <p class="ayuda" id="ayuda-mensaje">Máximo 40 caracteres. Ejemplo: «Feliz cumple, Ana».</p>
+                <p class="error" id="error-mensaje"></p>
+            </div>
+
+            <div class="opcion">
+                <input type="checkbox" id="acepto" name="acepto" required aria-describedby="error-acepto">
+                <label for="acepto">Acepto que me contacten por teléfono para confirmar el pedido.</label>
+            </div>
+            <p class="error" id="error-acepto"></p>
+
+            <div class="resumen-pedido">
+                <p>Total estimado: <span class="total" id="total" aria-live="polite">$0,00</span></p>
+                <p class="ayuda">El total incluye el envío de $3,00 cuando se elige entrega a domicilio.</p>
+            </div>
+
+            <div class="acciones">
+                <button type="submit" class="boton">Enviar pedido</button>
+                <button type="reset" class="boton boton--secundario">Limpiar formulario</button>
+            </div>
+
+            <p class="ayuda">
+                Este sitio es un proyecto académico: el formulario valida los datos en el navegador
+                y no los envía a ningún servidor.
+            </p>
+            </form>
+
+            <aside class="ayuda-pedido" aria-labelledby="titulo-ayuda">
+                <h2 id="titulo-ayuda">Cómo funciona</h2>
+                <ol>
+                    <li>Elige el pastel y la cantidad.</li>
+                    <li>Indica la fecha: necesitamos al menos 48 horas.</li>
+                    <li>Te llamamos para confirmar el pedido y coordinar el pago.</li>
+                </ol>
+                <h2>¿Necesitas ayuda?</h2>
+                <p>
+                    Llámanos al <a href="tel:+593960606529">096 060 6529</a> de lunes a sábado,
+                    o escríbenos a <a href="mailto:shirleycedeno98@gmail.com">shirleycedeno98@gmail.com</a>.
+                </p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="pie__contenido">
+            <section aria-labelledby="pie-marca">
+                <h2 id="pie-marca">Dulce Shirley</h2>
+                <p>Pastelería artesanal en Portoviejo. Recetas de familia desde 2012.</p>
+            </section>
+            <section aria-labelledby="pie-visita">
+                <h2 id="pie-visita">Visítanos</h2>
+                <p>Calle Bolívar 123 y Sucre<br>Portoviejo, Manabí</p>
+                <p>Teléfono: <a href="tel:+593960606529">096 060 6529</a></p>
+            </section>
+            <section aria-labelledby="pie-horario">
+                <h2 id="pie-horario">Horario</h2>
+                <p>Lunes a viernes: 8h00 a 19h00<br>Sábado: 9h00 a 16h00</p>
+            </section>
+            <nav aria-labelledby="pie-enlaces">
+                <h2 id="pie-enlaces">Enlaces</h2>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="pie__legal">
+            © 2026 Dulce Shirley · Proyecto académico de Desarrollo Basado en Plataformas (UTM).
+            Los pedidos de este sitio son de práctica y no se envían a ningún servidor.
+        </p>
+    </footer>
+</body>
+
+</html>
